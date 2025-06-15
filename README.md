@@ -861,7 +861,34 @@ chmod +x .git/hooks/pre-commit
 docker-compose up -d postgres kafka
 ```
 
-## 📄 License
+## � Developer Experience with AI
+
+This project represents my first journey into AI-assisted development, and I'm excited to share my experience:
+
+### Working with AI on This Project
+
+As a developer building this banking system, I leveraged AI tools to assist with various aspects of the project:
+
+- **Architecture Design**: AI helped conceptualize the microservices architecture and domain boundaries
+- **Code Generation**: Scaffolded services and implemented business logic with AI guidance
+- **Test Coverage**: Developed robust test suites for all microservices
+- **Documentation**: Created comprehensive documentation across all services
+- **Troubleshooting**: Used AI to debug issues and improve code quality
+
+### My Personal Experience
+
+"This is my first time building something with AI, and while the response of AI was sometimes slow and could be improved, I am very impressed by the results. The AI assistance helped me create a more comprehensive, well-documented, and robustly tested system than I might have built on my own in the same timeframe. It was particularly helpful with creating extensive documentation and setting up proper test coverage. I look forward to continuing to use AI as a collaborative tool in my development workflow."
+
+*- Ramish Taha, Developer*
+
+### Lessons Learned
+
+- **AI as a Collaborative Tool**: AI works best as a partner in the development process, not a replacement for developer expertise
+- **Iterative Improvement**: The project evolved through multiple iterations of AI suggestions and developer refinement
+- **Knowledge Expansion**: Working with AI exposed me to best practices I might not have otherwise discovered
+- **Balancing AI Input**: Learning when to follow AI suggestions versus when to apply domain-specific knowledge
+
+## �📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
@@ -881,4 +908,4 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
 
 ---
 
-**Built with ❤️ by the Banking System Team**
+**Built with ❤️ by Ramish Taha, with AI assistance**
