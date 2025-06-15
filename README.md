@@ -2,22 +2,51 @@
 
 A production-ready, enterprise-grade banking system built with microservices architecture using Java 17, Spring Boot 3.x, Apache Kafka, PostgreSQL, and Kubernetes. This system demonstrates best practices in distributed systems, event-driven architecture, and cloud-native development.
 
+## 💡 My Experience with AI-Assisted Development
+
+This project represents my first journey into AI-assisted development, and I'm excited to share my experience:
+
+### Working with AI on This Project
+
+As a developer building this banking system, I leveraged AI tools to assist with various aspects of the project:
+
+- **Architecture Design**: AI helped conceptualize the microservices architecture and domain boundaries
+- **Code Generation**: Scaffolded services and implemented business logic with AI guidance
+- **Test Coverage**: Developed robust test suites for all microservices
+- **Documentation**: Created comprehensive documentation across all services
+- **Troubleshooting**: Used AI to debug issues and improve code quality
+
+### My Personal Experience
+
+"This is my first time building something with AI, and while the response of AI was sometimes slow and could be improved, I am very impressed by the results. The AI assistance helped me create a more comprehensive, well-documented, and robustly tested system than I might have built on my own in the same timeframe. It was particularly helpful with creating extensive documentation and setting up proper test coverage. I look forward to continuing to use AI as a collaborative tool in my development workflow."
+
+*- Ramish Taha, Developer*
+
+### Lessons Learned
+
+- **AI as a Collaborative Tool**: AI works best as a partner in the development process, not a replacement for developer expertise
+- **Iterative Improvement**: The project evolved through multiple iterations of AI suggestions and developer refinement
+- **Knowledge Expansion**: Working with AI exposed me to best practices I might not have otherwise discovered
+- **Balancing AI Input**: Learning when to follow AI suggestions versus when to apply domain-specific knowledge
+
+---
+
 ## 📋 Table of Contents
 
-- [Architecture Overview](#architecture-overview)
-- [System Components](#system-components)
-- [Technology Stack](#technology-stack)
-- [Key Features](#key-features)
-- [Getting Started](#getting-started)
-- [Development Guide](#development-guide)
-- [Testing Strategy](#testing-strategy)
-- [Deployment](#deployment)
-- [Monitoring & Observability](#monitoring--observability)
-- [Security](#security)
-- [API Documentation](#api-documentation)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+- [Architecture Overview](#️-architecture-overview)
+- [System Components](#-system-components)
+- [Technology Stack](#-technology-stack)
+- [Key Features](#-key-features)
+- [Getting Started](#-getting-started)
+- [Development Guide](#-development-guide)
+- [Testing Strategy](#-testing-strategy)
+- [Deployment](#-deployment)
+- [Monitoring & Observability](#-monitoring--observability)
+- [Security](#-security)
+- [API Documentation](#-api-documentation)
+- [Troubleshooting](#-troubleshooting)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ## 🏗️ Architecture Overview
 
@@ -169,105 +198,69 @@ User Request → API Gateway → Service → Database
 - **Prometheus**: Metrics collection
 - **Grafana**: Monitoring dashboards
 - **ELK Stack**: Centralized logging (Elasticsearch, Logstash, Kibana)
-- **Jaeger**: Distributed tracing
-
-### Testing & Quality
-- **JUnit 5**: Unit testing framework
-- **Mockito**: Mocking framework
-- **TestContainers**: Integration testing with real databases
-- **WireMock**: API mocking for external dependencies
-- **SonarQube**: Code quality analysis
-- **Jacoco**: Code coverage reporting
 
 ## ✨ Key Features
 
-### Business Features
-- ✅ **User Management**: Registration, authentication, profile management
-- ✅ **Account Operations**: Create, update, close accounts with different types
-- ✅ **Transaction Processing**: Transfers, deposits, withdrawals with validation
-- ✅ **Multi-Channel Notifications**: Email, SMS, and Push notifications
-- ✅ **Real-time Updates**: Event-driven architecture for immediate updates
-- ✅ **Transaction History**: Complete audit trail of all operations
+### User Management
+- ✅ **Registration & Login**: Email/password, social login options
+- ✅ **Profile Management**: Personal details, preferences, settings
+- ✅ **Multi-factor Authentication**: SMS/email verification
+- ✅ **Role-based Access Control**: Customer, Admin, Manager roles
 
-### Technical Features
-- ✅ **Microservices Architecture**: Independently deployable services
-- ✅ **Event-Driven Design**: Asynchronous communication via Kafka
-- ✅ **API-First Design**: RESTful APIs with OpenAPI documentation
-- ✅ **Cloud-Native**: Kubernetes-ready with 12-factor app principles
-- ✅ **High Availability**: Load balancing, failover, and circuit breakers
-- ✅ **Security**: JWT authentication, HTTPS, input validation
-- ✅ **Observability**: Metrics, logging, and distributed tracing
-- ✅ **Data Consistency**: ACID transactions and eventual consistency
-- ✅ **Scalability**: Horizontal scaling with stateless services
-- ✅ **Fault Tolerance**: Retry mechanisms and graceful degradation
+### Account Management
+- ✅ **Multiple Account Types**: Savings, Checking, Fixed Deposit
+- ✅ **Balance Tracking**: Real-time balance updates
+- ✅ **Account Statements**: Downloadable monthly statements
+- ✅ **Interest Calculation**: Automated interest processing
+
+### Transaction Processing
+- ✅ **Money Transfers**: Internal and external transfers
+- ✅ **Scheduled Payments**: Future-dated and recurring transfers
+- ✅ **Transaction History**: Complete audit trail of all operations
+- ✅ **Transaction Categories**: Automatic categorization for expenses
+
+### Notifications
+- ✅ **Multi-channel Delivery**: Email, SMS, Push notifications
+- ✅ **Custom Alerts**: Balance thresholds, large transactions, etc.
+- ✅ **Personalized Content**: Dynamic templates with user data
+- ✅ **Delivery Tracking**: Read receipts and delivery confirmations
+
+### Security Features
+- ✅ **JWT Authentication**: Secure token-based authentication
+- ✅ **API Rate Limiting**: Protection against brute-force attacks
+- ✅ **Data Encryption**: All sensitive data encrypted at rest and in transit
+- ✅ **Audit Logging**: Comprehensive audit trails for all activities
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
 #### Required Software
-```bash
-# Java Development
-Java 17 (OpenJDK recommended)
-Apache Maven 3.8+
+- Java 17 or higher
+- Maven 3.8 or higher
+- Docker and Docker Compose
+- PostgreSQL (or use provided Docker image)
+- Kafka (or use provided Docker image)
 
-# Containerization
-Docker 20.x+
-Docker Compose 2.x+
-
-# Kubernetes (choose one)
-Minikube 1.25+ (for local development)
-Kind 0.17+ (alternative for local)
-kubectl 1.25+
-
-# Optional Tools
-Git 2.30+
-IntelliJ IDEA / VS Code
-Postman (for API testing)
-```
-
-#### System Requirements
-- **RAM**: Minimum 8GB (16GB recommended for full local deployment)
-- **CPU**: 4+ cores recommended
-- **Disk**: 10GB free space
-- **OS**: Windows 10/11, macOS 10.15+, or Linux
-
-### Quick Start (Docker Compose)
+### Local Development Setup
 
 1. **Clone the Repository**
 ```bash
-git clone <repository-url>
-cd "Banking system"
+git clone https://github.com/ramishtaha/banking-system-microservices.git
+cd banking-system-microservices
 ```
 
 2. **Build All Services**
 ```bash
-mvn clean package -DskipTests
+mvn clean install -DskipTests
 ```
 
-3. **Start Infrastructure Services**
-```bash
-docker-compose up -d postgres kafka zookeeper
-```
-
-4. **Start Application Services**
+3. **Run with Docker Compose**
 ```bash
 docker-compose up -d
 ```
 
-5. **Verify Deployment**
-```bash
-# Check service health
-curl http://localhost:8080/actuator/health
-
-# Access Eureka Dashboard
-open http://localhost:8761
-
-# View API Documentation
-open http://localhost:8080/swagger-ui.html
-```
-
-### Local Development Setup
+### Alternative Startup Options
 
 1. **Start Infrastructure Only**
 ```bash
@@ -371,111 +364,52 @@ docker-compose up --build -d
 
 Each service has multiple configuration profiles:
 
-- **`application.yml`**: Default configuration
-- **`application-dev.yml`**: Development environment
-- **`application-prod.yml`**: Production environment
-- **`application-test.yml`**: Testing environment
-
-Environment-specific properties are managed through the Config Server.
+- **default**: Base configuration shared across all environments
+- **dev**: Local development configuration
+- **test**: Testing configuration with H2 database
+- **prod**: Production-ready configuration
 
 ## 🧪 Testing Strategy
+
+Our comprehensive testing strategy ensures reliability and stability:
 
 ### Testing Pyramid
 
 #### Unit Tests (60% of tests)
-- **Scope**: Individual classes and methods
-- **Tools**: JUnit 5, Mockito
-- **Coverage Target**: 80%+
-- **Run Command**: `mvn test`
-
-```bash
-# Run unit tests for specific service
-cd user-service
-mvn test
-
-# Generate coverage report
-mvn jacoco:report
-```
+- Individual components in isolation
+- Mock external dependencies
+- Fast execution, high coverage
 
 #### Integration Tests (30% of tests)
-- **Scope**: Service interactions and database operations
-- **Tools**: Spring Boot Test, TestContainers
-- **Database**: H2 in-memory for fast execution
-- **Run Command**: `mvn verify`
+- Test component interactions
+- Test database operations with H2
+- API contract validation
 
 #### End-to-End Tests (10% of tests)
-- **Scope**: Complete user workflows
-- **Tools**: REST Assured, TestContainers
-- **Environment**: Full Docker Compose stack
-- **Run Command**: `mvn verify -Pintegration-tests`
+- Full request/response flows
+- Simulate real-world scenarios
+- API Gateway to database and back
 
-### Test Categories
+### Testing Tools
 
-#### Service Layer Tests
-```java
-@ExtendWith(MockitoExtension.class)
-class UserServiceTest {
-    @Mock
-    private UserRepository userRepository;
-    
-    @InjectMocks
-    private UserService userService;
-    
-    @Test
-    void shouldCreateUser() {
-        // Test implementation
-    }
-}
-```
+- **JUnit 5**: Testing framework
+- **Mockito**: Mocking framework
+- **TestContainers**: Integration tests with real services
+- **RestAssured**: API testing
+- **Cucumber**: BDD testing for critical flows
+- **JaCoCo**: Code coverage reports
 
-#### Repository Layer Tests
-```java
-@DataJpaTest
-@ActiveProfiles("test")
-class UserRepositoryTest {
-    @Autowired
-    private TestEntityManager entityManager;
-    
-    @Autowired
-    private UserRepository userRepository;
-    
-    @Test
-    void shouldFindByEmail() {
-        // Test implementation
-    }
-}
-```
+### Test Execution
 
-#### Controller Layer Tests
-```java
-@WebMvcTest(UserController.class)
-class UserControllerTest {
-    @Autowired
-    private MockMvc mockMvc;
-    
-    @MockBean
-    private UserService userService;
-    
-    @Test
-    void shouldCreateUser() throws Exception {
-        // Test implementation
-    }
-}
-```
-
-### Running All Tests
 ```bash
-# Run all tests across all services
+# Run all tests
 mvn test
 
 # Run tests with coverage
-mvn clean verify jacoco:report
+mvn test jacoco:report
 
-# Run integration tests
-mvn verify -Pintegration-tests
-
-# Generate aggregated test report
-mvn surefire-report:report-only
+# Skip tests during build
+mvn clean package -DskipTests
 ```
 
 ## 🚢 Deployment
@@ -572,144 +506,153 @@ kubectl apply -f k8s/production/
 
 ## 📊 Monitoring & Observability
 
-### Metrics Collection (Prometheus)
-- **URL**: http://localhost:9090
-- **Metrics**: Custom application metrics, JVM metrics, HTTP metrics
-- **Retention**: 15 days (configurable)
+### Metrics Collection
 
-### Monitoring Dashboards (Grafana)
-- **URL**: http://localhost:3000
-- **Credentials**: admin/admin
-- **Pre-configured Dashboards**:
-  - Application Overview
-  - Service-specific metrics
-  - Infrastructure monitoring
-  - Business metrics
-
-### Centralized Logging (ELK Stack)
+#### Prometheus & Grafana
 ```bash
-# Start ELK stack
-docker-compose -f docker-compose.elk.yml up -d
+# Deploy monitoring stack
+kubectl apply -f k8s/monitoring/
+
+# Access Grafana
+kubectl port-forward svc/grafana 3000:3000 -n monitoring
+```
+
+Default dashboards include:
+- System Overview
+- Service Performance
+- JVM Metrics
+- Transaction Throughput
+- Error Rates
+
+### Distributed Tracing
+
+#### Spring Cloud Sleuth & Zipkin
+```bash
+# Deploy Zipkin
+kubectl apply -f k8s/tracing/
+
+# Access Zipkin UI
+kubectl port-forward svc/zipkin 9411:9411 -n monitoring
+```
+
+### Log Aggregation
+
+#### ELK Stack
+```bash
+# Deploy ELK stack
+kubectl apply -f k8s/logging/
 
 # Access Kibana
-open http://localhost:5601
-
-# View application logs
-# Kibana → Discover → Select index pattern
+kubectl port-forward svc/kibana 5601:5601 -n logging
 ```
 
-### Distributed Tracing (Jaeger)
-```bash
-# Start Jaeger
-docker run -d --name jaeger \
-  -p 16686:16686 \
-  -p 14268:14268 \
-  jaegertracing/all-in-one:latest
+Predefined Log Dashboards:
+- Error Analysis
+- Service Performance
+- User Activity
+- Security Events
 
-# Access Jaeger UI
-open http://localhost:16686
-```
+### Health Checks & Alerts
 
-### Health Checks
+#### Spring Boot Actuator
+All services expose health endpoints:
+- `/actuator/health`: Overall service health
+- `/actuator/metrics`: Detailed metrics
+- `/actuator/prometheus`: Prometheus-format metrics
 
-Each service exposes health endpoints:
-```bash
-# Service health
-curl http://localhost:8081/actuator/health
-
-# Detailed health information
-curl http://localhost:8081/actuator/health/details
-
-# Service info
-curl http://localhost:8081/actuator/info
-
-# Metrics endpoint
-curl http://localhost:8081/actuator/prometheus
-```
+#### Alerting
+Configure alerts for:
+- Service availability < 99.9%
+- High error rates (> 0.1%)
+- Response times > 500ms
+- JVM memory usage > 80%
+- CPU usage > 70%
 
 ## 🔒 Security
 
 ### Authentication & Authorization
-- **JWT Tokens**: Stateless authentication
-- **Role-Based Access Control**: User, Admin, Super Admin roles
-- **OAuth2**: Support for external identity providers
-- **Session Management**: Token expiration and refresh
 
-### API Security
-- **HTTPS Only**: All production traffic encrypted
-- **CORS**: Configured for web clients
-- **Rate Limiting**: Protection against abuse
-- **Input Validation**: DTO validation with Bean Validation
-- **SQL Injection Protection**: Parameterized queries
+#### JWT-Based Security
+- Stateless authentication via JWT tokens
+- Token expiration and refresh mechanism
+- Role-based access control (RBAC)
 
-### Data Protection
-- **Encryption at Rest**: Database encryption
-- **Encryption in Transit**: TLS 1.3
-- **Sensitive Data**: Masked in logs
-- **Audit Trail**: Complete transaction history
+#### API Security
+- HTTPS-only communication
+- CSRF protection
+- XSS prevention
+- Content Security Policy
 
-### Security Headers
-```yaml
-security:
-  headers:
-    frame-options: DENY
-    content-type-options: nosniff
-    xss-protection: 1; mode=block
-    hsts: max-age=31536000; includeSubDomains
-```
+### Encryption
 
-## 📚 API Documentation
+All sensitive data is encrypted:
+- Data at rest: Database-level encryption
+- Data in transit: TLS 1.3
+- Personal data: Field-level encryption
 
-### OpenAPI/Swagger Documentation
+### Secure Configuration
 
-Each service provides interactive API documentation:
+- Secret management with Kubernetes Secrets
+- Encrypted configuration with Spring Cloud Config
+- No hardcoded credentials
+- Regular security audits
 
-- **API Gateway**: http://localhost:8080/swagger-ui.html
-- **User Service**: http://localhost:8081/swagger-ui.html
-- **Account Service**: http://localhost:8082/swagger-ui.html
-- **Transaction Service**: http://localhost:8083/swagger-ui.html
-- **Notification Service**: http://localhost:8084/swagger-ui.html
+## 📝 API Documentation
 
-### API Collections
+### Swagger Documentation
 
-Postman collections are available in `/docs/postman/`:
-- `Banking-System-APIs.postman_collection.json`
-- `Banking-System-Environment.postman_environment.json`
+Each service provides interactive API documentation using OpenAPI 3.0 (Swagger):
 
-### Example API Calls
+- API Gateway: `http://localhost:8080/swagger-ui.html`
+- User Service: `http://localhost:8081/swagger-ui.html`
+- Account Service: `http://localhost:8082/swagger-ui.html`
+- Transaction Service: `http://localhost:8083/swagger-ui.html`
+- Notification Service: `http://localhost:8084/swagger-ui.html`
 
-#### Create User
+### API Conventions
+
+- All APIs use JSON for request/response
+- Authentication via JWT Bearer token
+- Consistent error formats
+- Paginated responses for collection endpoints
+- Hypermedia links (HATEOAS) for resource navigation
+
+### Sample API Calls
+
+#### User Registration
 ```bash
-curl -X POST http://localhost:8080/api/users \
+curl -X POST "http://localhost:8080/api/users/register" \
   -H "Content-Type: application/json" \
   -d '{
     "firstName": "John",
     "lastName": "Doe",
     "email": "john.doe@example.com",
-    "password": "securePassword123"
+    "password": "SecurePass123",
+    "phoneNumber": "+1234567890"
   }'
 ```
 
-#### Create Account
+#### Account Creation
 ```bash
-curl -X POST http://localhost:8080/api/accounts \
+curl -X POST "http://localhost:8080/api/accounts" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <JWT_TOKEN>" \
+  -H "Authorization: Bearer <your-token>" \
   -d '{
     "userId": 1,
-    "accountType": "SAVINGS",
-    "initialBalance": 1000.00
+    "type": "SAVINGS",
+    "initialDeposit": 1000.00,
+    "currency": "USD"
   }'
 ```
 
-#### Transfer Money
+#### Create Transaction
 ```bash
-curl -X POST http://localhost:8080/api/transactions/transfer \
+curl -X POST "http://localhost:8080/api/transactions" \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <JWT_TOKEN>" \
+  -H "Authorization: Bearer <your-token>" \
   -d '{
-    "fromAccountId": 1,
-    "toAccountId": 2,
+    "sourceAccountId": 1,
+    "destinationAccountId": 2,
     "amount": 500.00,
     "description": "Transfer to savings"
   }'
@@ -719,55 +662,54 @@ curl -X POST http://localhost:8080/api/transactions/transfer \
 
 ### Common Issues
 
-#### Service Discovery Issues
+#### Connection Errors
 ```bash
-# Check Eureka dashboard
-open http://localhost:8761
+# Check service availability
+curl http://localhost:8761/eureka/apps
 
-# Verify service registration
-kubectl get pods -n banking-system
-kubectl logs <pod-name> -n banking-system
+# Restart discovery service
+docker-compose restart discovery-server
+
+# Check connection between services
+docker network inspect banking-system_default
 ```
 
-#### Database Connection Issues
+#### Database Issues
 ```bash
-# Check PostgreSQL status
-docker-compose ps postgres
+# Check database availability
+docker-compose exec postgres pg_isready
 
 # View database logs
 docker-compose logs postgres
 
-# Connect to database
-docker exec -it postgres psql -U postgres -d banking_db
+# Connect to database directly
+docker-compose exec postgres psql -U postgres
 ```
 
-#### Kafka Issues
+#### Kafka Problems
 ```bash
-# Check Kafka status
-docker-compose ps kafka
+# Check topic list
+docker-compose exec kafka kafka-topics --list --bootstrap-server localhost:9092
 
-# List topics
-docker exec -it kafka kafka-topics.sh --list --bootstrap-server localhost:9092
+# View consumer groups
+docker-compose exec kafka kafka-consumer-groups --bootstrap-server localhost:9092 --list
 
-# View messages
-docker exec -it kafka kafka-console-consumer.sh \
-  --topic user-events \
-  --from-beginning \
-  --bootstrap-server localhost:9092
+# Create missing topic
+docker-compose exec kafka kafka-topics --create --topic missing-topic --bootstrap-server localhost:9092 --partitions 3 --replication-factor 1
 ```
 
-### Debugging Tips
+### Diagnostic Tools
 
-#### Enable Debug Logging
-```yaml
-logging:
-  level:
-    com.bankingsystem: DEBUG
-    org.springframework.web: DEBUG
-    org.springframework.security: DEBUG
+#### JVM Profiling
+```bash
+# Attach jstack to running process
+jstack <pid> > thread-dump.txt
+
+# Memory analysis
+jmap -dump:format=b,file=heap-dump.bin <pid>
 ```
 
-#### Performance Issues
+#### Actuator Endpoints
 ```bash
 # Check service metrics
 curl http://localhost:8081/actuator/metrics/jvm.memory.used
@@ -861,34 +803,7 @@ chmod +x .git/hooks/pre-commit
 docker-compose up -d postgres kafka
 ```
 
-## � Developer Experience with AI
-
-This project represents my first journey into AI-assisted development, and I'm excited to share my experience:
-
-### Working with AI on This Project
-
-As a developer building this banking system, I leveraged AI tools to assist with various aspects of the project:
-
-- **Architecture Design**: AI helped conceptualize the microservices architecture and domain boundaries
-- **Code Generation**: Scaffolded services and implemented business logic with AI guidance
-- **Test Coverage**: Developed robust test suites for all microservices
-- **Documentation**: Created comprehensive documentation across all services
-- **Troubleshooting**: Used AI to debug issues and improve code quality
-
-### My Personal Experience
-
-"This is my first time building something with AI, and while the response of AI was sometimes slow and could be improved, I am very impressed by the results. The AI assistance helped me create a more comprehensive, well-documented, and robustly tested system than I might have built on my own in the same timeframe. It was particularly helpful with creating extensive documentation and setting up proper test coverage. I look forward to continuing to use AI as a collaborative tool in my development workflow."
-
-*- Ramish Taha, Developer*
-
-### Lessons Learned
-
-- **AI as a Collaborative Tool**: AI works best as a partner in the development process, not a replacement for developer expertise
-- **Iterative Improvement**: The project evolved through multiple iterations of AI suggestions and developer refinement
-- **Knowledge Expansion**: Working with AI exposed me to best practices I might not have otherwise discovered
-- **Balancing AI Input**: Learning when to follow AI suggestions versus when to apply domain-specific knowledge
-
-## �📄 License
+## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
