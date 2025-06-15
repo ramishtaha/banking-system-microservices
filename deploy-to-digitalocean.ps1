@@ -2,7 +2,7 @@
 
 # You'll need to replace these values with your own
 $CLUSTER_NAME = "banking-system-cluster"
-$REGION = "nyc1"
+$REGION = "blr1"
 $NODE_SIZE = "s-2vcpu-4gb"
 $NODE_COUNT = 3
 $KUBERNETES_VERSION = "1.27"

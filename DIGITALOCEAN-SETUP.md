@@ -85,14 +85,14 @@ doctl auth init
 ## 5. Create a Container Registry
 
 ```bash
-doctl registry create banking-system --region nyc1
+doctl registry create banking-system --region blr1
 doctl registry login
 ```
 
 ## 6. Create a Kubernetes Cluster
 
 ```bash
-doctl kubernetes cluster create banking-system-cluster --region nyc1 --size s-2vcpu-4gb --count 3 --version 1.27
+doctl kubernetes cluster create banking-system-cluster --region blr1 --size s-2vcpu-4gb --count 3 --version 1.27
 ```
 
 ## 7. Configure kubectl
