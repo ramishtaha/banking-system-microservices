@@ -5,7 +5,7 @@ CLUSTER_NAME="banking-system-cluster"
 REGION="blr1"
 NODE_SIZE="s-2vcpu-4gb"
 NODE_COUNT=3
-KUBERNETES_VERSION="1.32.2"
+KUBERNETES_VERSION="1.32.2-do.3"
 
 # Step 1: Authenticate with DigitalOcean
 echo "Step 1: Please authenticate with DigitalOcean"

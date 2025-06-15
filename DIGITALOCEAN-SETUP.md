@@ -92,7 +92,7 @@ doctl registry login
 ## 6. Create a Kubernetes Cluster
 
 ```bash
-doctl kubernetes cluster create banking-system-cluster --region blr1 --size s-2vcpu-4gb --count 3 --version 1.32.2
+doctl kubernetes cluster create banking-system-cluster --region blr1 --size s-2vcpu-4gb --count 3 --version 1.32.2-do.3
 ```
 
 ## 7. Configure kubectl
